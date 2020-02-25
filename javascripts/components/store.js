@@ -1,5 +1,6 @@
 import util from '../helpers/util.js'
 import bookData from '../helpers/data/bookData.js'
+import cart from './cart.js'
 
 const makeStore = () => {
     const book = bookData.getBook();
@@ -13,10 +14,7 @@ const makeStore = () => {
 
 
 const addToCartEvent = () => {
-    console.log('added to cart')
-    // let domString = '';
-    // domString += 'This is the cart';
-    // util.printToDom('cart-container', domString)
+    cart.cartToDom();
 };
 
 export default { makeStore };
